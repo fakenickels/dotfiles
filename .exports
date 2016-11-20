@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+export default JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
+export default ANDROID_HOME=~/Android/Sdk
+export default ANT_HOME=~/apache-ant-1.9.6
+export default GRADLE_HOME=~/gradle
+
+# Meteor local packages
+export default PACKAGE_DIRS=/home/gabriel/meteor/packages
+# Meteor dev bundle
+export default METEOR_DEV=~/projects/meteor
+
+
+# Path
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+PATH=$PATH:$ANT_HOME/bin
+PATH=$PATH:$GRADLE_HOME/bin
+export PATH
+
+# Default editor
+export EDITOR="vim"
+
+# Increase Bash history size. Allow 32³ entries; the default is 500.
+export HISTSIZE='32768';
+export HISTFILESIZE="${HISTSIZE}";
+# Omit duplicates and commands that begin with a space from history.
+export HISTCONTROL='ignoreboth';

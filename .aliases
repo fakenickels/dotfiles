@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+alias gfp="g flow feature publish"
+alias dolly="git clone"
+alias i="yarn add"
+alias idev="yarn remove"
+
+# Commom mistakes (not a thing to be ashamed of! everybody does!)
+alias ggcmsg="gcmsg"
+alias gmcsg="gcmsg"
