@@ -1,8 +1,11 @@
-  " Write and close quickly
+" Write and close quickly
 nmap <Leader>wq :wq<Cr>
+
+" Clean up search highlights
+nmap <C-l> :noh<Cr>
 
 " Set default theme
 colorscheme pablo
 
 " Send all yanking/deleting ops to clipboard
-clipboard=unnamedplus
+set clipboard=unnamedplus
