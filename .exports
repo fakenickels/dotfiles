@@ -12,7 +12,6 @@ export default METEOR_DEV=~/projects/meteor
 
 
 # Path
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 PATH=$PATH:$ANT_HOME/bin
 PATH=$PATH:$GRADLE_HOME/bin
