@@ -1,3 +1,6 @@
+" Set indentation
+set ts=2 sw=2
+
 " Write and close quickly
 nmap <Leader>wq :wq<Cr>
 
