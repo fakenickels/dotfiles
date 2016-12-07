@@ -67,11 +67,15 @@ curl https://install.meteor.com/ | sh
 # Setup React Native
 yarn global add react-native-cli
 
-# Setup Android SDK
+# Setup Android Studio, this is downloading only the studio for now
+# Need to automate the SDK too
 ANDROID_SDK_URL=https://dl.google.com/dl/android/studio/ide-zips/2.2.2.0/android-studio-ide-145.3360264-linux.zip
 curl $ANDROID_SDK_URL -o ~/android_sdk.zip
 unzip ~/android_sdk.zip
 mv ~/android-studio ~/Android
+# aapt tool is a 32bit application so weed need these libs to get it running
+# as we are on ubuntu 64bit
+sudo apt-get install lib32stdc++6 lib32z1 -y
 
 # Setup zsh
 chsh -s /bin/zsh user
