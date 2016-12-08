@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-export default JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
-export default ANDROID_HOME=~/Android/Sdk
-export default ANT_HOME=~/apache-ant-1.9.6
-export default GRADLE_HOME=~/gradle
+export JAVA_HOME="$(jrunscript -e 'java.lang.System.out.println(java.lang.System.getProperty("java.home"));')"
+export ANDROID_HOME=~/AndroidSDK
+export ANT_HOME=~/apache-ant-1.9.6
+export GRADLE_HOME=~/gradle
 
 # Meteor local packages
-export default PACKAGE_DIRS=/home/gabriel/meteor/packages
+export PACKAGE_DIRS=/home/gabriel/meteor/packages
 # Meteor dev bundle
-export default METEOR_DEV=~/projects/meteor
+export METEOR_DEV=~/projects/meteor
 
 
 # Path
