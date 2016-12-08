@@ -14,6 +14,9 @@ sudo apt-get install tree -y
 sudo apt-get install vlc -y
 sudo apt-get install chromium -y
 sudo apt-get install unity-tweak-tool -y
+# Install automake and tools
+sudo apt-get install autotools-dev -y
+sudo apt-get install automake -y
 
 # Install Java
 sudo apt-get install default-jre -y
