@@ -17,6 +17,8 @@ sudo apt-get install unity-tweak-tool -y
 # Install automake and tools
 sudo apt-get install autotools-dev -y
 sudo apt-get install automake -y
+# Python dev lib
+sudo apt-get install python-dev
 
 # Install Java
 sudo apt-get install default-jre -y
