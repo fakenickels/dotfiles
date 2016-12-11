@@ -5,6 +5,7 @@ sudo apt-get upgrade
 
 sudo apt-get install build-essential -y
 sudo apt-get install git-all -y
+sudo apt-get install git-extras -y
 # vim-gtk with batteries includes
 sudo apt-get install vim vim-gtk -y
 sudo apt-get install tmux -y
