@@ -6,7 +6,7 @@ export ANT_HOME=~/apache-ant-1.9.6
 export GRADLE_HOME=~/gradle
 
 # Meteor local packages
-export PACKAGE_DIRS=/home/gabriel/meteor/packages
+export METEOR_PACKAGE_DIRS=/home/gabriel/meteor/packages
 # Meteor dev bundle
 export METEOR_DEV=~/projects/meteor
 
