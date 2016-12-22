@@ -2,8 +2,9 @@
 
 alias gfp="g flow feature publish"
 alias dolly="git clone"
-alias i="yarn add"
-alias idev="yarn remove"
+alias ya="yarn add"
+alias yad="yarn add --dev"
+alias yr="yarn remove"
 
 # Commom mistakes (not a thing to be ashamed of! everybody does!)
 alias ggcmsg="gcmsg"
