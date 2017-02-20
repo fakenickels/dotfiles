@@ -67,6 +67,10 @@ nvm install node
 nvm use node
 npm i -g yarn
 
+# Better git diffs
+yarn global add diff-so-fancy
+git config --global core.pager "diff-so-fancy | less"
+
 # Install Meteor
 curl https://install.meteor.com/ | sh
 
