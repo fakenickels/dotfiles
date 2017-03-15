@@ -87,6 +87,17 @@ mv ~/android-studio ~/Android
 # as we are on ubuntu 64bit
 sudo apt-get install lib32stdc++6 lib32z1 -y
 
+## Docker ##
+## installs docker here
+# Setup docker
+# Create group docker if it isn't there
+sudo groupadd docker
+# Add current user to docker group
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+
+## END DOCKER ##
+
 # Setup zsh
 chsh -s /bin/zsh user
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
