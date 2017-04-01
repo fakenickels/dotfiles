@@ -1,40 +1,69 @@
 #!/bin/sh
 
-sudo apt-get update
-sudo apt-get upgrade
+function initialize() {
+  sudo apt-get update
+  sudo apt-get upgrade
 
-sudo apt-get install build-essential -y
-sudo apt-get install git-all -y
-sudo apt-get install git-extras -y
-# vim-gtk with batteries includes
-sudo apt-get install vim vim-gtk -y
-sudo apt-get install tmux -y
-sudo apt-get install zsh -y
-sudo apt-get install curl -y
-sudo apt-get install tree -y
-sudo apt-get install vlc -y
-sudo apt-get install chromium -y
-sudo apt-get install unity-tweak-tool -y
-# Install automake and tools
-sudo apt-get install autotools-dev -y
-sudo apt-get install automake -y
-# Python dev lib
-sudo apt-get install python-dev
+  sudo apt-get install build-essential -y
+}
 
-# Install Java
-sudo apt-get install default-jre -y
-sudo apt-get install default-jdk -y
+function installGit() {
+  sudo apt-get install git-all -y
+  sudo apt-get install git-extras -y
+  git config --global user.email "grsabreu@gmail.com"
+  git config --global user.name "Gabriel Rubens"
+}
 
-# Install Paper
-sudo add-apt-repository ppa:snwh/pulp -y
-# update repository info
-sudo apt-get update
-# install icon theme
-sudo apt-get install paper-icon-theme -y
-# install gtk theme
-sudo apt-get install paper-gtk-theme -y
-# install cursor theme
-sudo apt-get install paper-cursor-theme -y
+function installHerokuCLI() {
+  sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+  curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+  sudo apt-get update
+  sudo apt-get install heroku
+}
+
+function installDevSuperpowers() {
+  # vim-gtk with batteries includes
+  sudo apt-get install vim vim-gtk -y
+  sudo apt-get install tmux -y
+  sudo apt-get install zsh -y
+  sudo apt-get install curl -y
+  sudo apt-get install tree -y
+}
+
+function installTooling() {
+  sudo apt-get install vlc -y
+  sudo apt-get install unity-tweak-tool -y
+  # Install automake and tools
+  sudo apt-get install autotools-dev -y
+  sudo apt-get install automake -y
+  # Python dev lib
+  sudo apt-get install python-dev
+}
+
+function installJava() {
+  sudo apt-get install default-jre -y
+  sudo apt-get install default-jdk -y
+}
+
+function installPaperTheme() {
+  sudo add-apt-repository ppa:snwh/pulp -y
+  # update repository info
+  sudo apt-get update
+  # install icon theme
+  sudo apt-get install paper-icon-theme -y
+  # install gtk theme
+  sudo apt-get install paper-gtk-theme -y
+  # install cursor theme
+  sudo apt-get install paper-cursor-theme -y
+}
+
+initialize
+installGit
+installDevSuperpowers
+installHeroku
+installTooling
+installJava
+installPaperTheme
 
 # Install Source Code Pro
 # Thanks to https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-102803992
@@ -50,10 +79,6 @@ mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"
    'https://github.com/adobe-fonts/source-code-pro.git' \
    "$FONT_HOME/adobe-fonts/source-code-pro" && \
 fc-cache -f -v "$FONT_HOME/adobe-fonts/source-code-pro")
-
-# Setup git
-git config --global user.email "grsabreu@gmail.com"
-git config --global user.name "Gabriel Rubens"
 
 # Setup Vim
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
