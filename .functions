@@ -96,3 +96,9 @@ function json() {
 		python -mjson.tool | pygmentize -l javascript;
 	fi;
 }
+
+# Kill all node processes at the specified port
+function stabnode() {
+  echo "Gonna kill'em all 🔪";
+  lsof -i :$@ | grep "node" | awk '{print $2;}' | xargs kill -9;
+}
