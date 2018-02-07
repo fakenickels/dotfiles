@@ -10,6 +10,13 @@ function push() {
   git push origin $branch
 }
 
+# Push a branch and opens a PR with the develop being the base
+# Usage: $ pr "This is the PR message"
+function pr() {
+  local branch=`git rev-parse --symbolic-full-name --abbrev-ref HEAD`
+  push;
+  hub pull-request -h $branch -b develop -m $1
+}
 
 # Some functions got from https://github.com/mathiasbynens/dotfiles/blob/master/.functions!
 
